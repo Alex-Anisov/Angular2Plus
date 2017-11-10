@@ -1,0 +1,15 @@
+<div *ngIf="getProductsCount() === 0">
+  <h3>Your card is empty</h3>
+</div>
+<div *ngIf="getProductsCount() > 0">
+    <h3>You have {{getProductsCount()}} Product(s) in your card:</h3>
+    <div *ngFor="let n of getProductNames(); index as i">
+        - {{n}}
+        <input type="button" value="Remove" (click)="removeFromCart(i)"/>
+    </div>
+    <hr/>
+    <div>
+      Total ammount is: {{getAmmount()}}
+    </div>
+    <input type="button" value="Clear all" (click)="clearAll()"/>
+</div>

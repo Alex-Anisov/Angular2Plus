@@ -1,0 +1,12 @@
+.main{
+    overflow: hidden;
+}
+
+.products{
+    float: left;
+    width: 80%;
+}
+
+.cart{
+    float: left;    
+}

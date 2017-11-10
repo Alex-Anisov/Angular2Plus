@@ -1,0 +1,14 @@
+<div class="product">
+<div>{{product.name}}</div>
+<div>{{product.description}}</div>
+<div>{{product.price}}</div>
+<div>{{product.category}}</div>
+<div>
+  Ingidients:
+  <br>
+    <div *ngFor="let c of product.ingridients">
+    - {{c}}
+    </div>
+</div>
+<input type="button" (click)="addToCart()" value="Add to Cart"/>
+</div>

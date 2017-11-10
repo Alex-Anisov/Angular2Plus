@@ -1,0 +1,1 @@
+Added Remove from Cart by single product, Clear All, total cart products ammount.
