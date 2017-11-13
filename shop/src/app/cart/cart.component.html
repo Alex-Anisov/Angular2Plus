@@ -1,8 +1,8 @@
 <div *ngIf="getProductsCount() === 0">
-  <h3>Your card is empty</h3>
+  <h3>Your cart is empty</h3>
 </div>
 <div *ngIf="getProductsCount() > 0">
-    <h3>You have {{getProductsCount()}} Product(s) in your card:</h3>
+    <h3>You have {{getProductsCount()}} Product(s) in your cart:</h3>
     <div *ngFor="let n of getProductNames(); index as i">
         - {{n}}
         <input type="button" value="Remove" (click)="removeFromCart(i)"/>
