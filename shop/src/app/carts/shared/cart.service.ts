@@ -1,38 +1,41 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../products/shared/product.model'
+import { Product } from '../../products/shared/product.model';
 
 @Injectable()
 export class CartService {
-  
-  private productsInCart: Array<Product>
+  private productsInCart: Array<Product>;
 
-  addToCart(product: Product){
+  getProductsInCart(): Array<Product> {
+    return this.productsInCart;
+  }
+
+  addToCart(product: Product) {
     this.productsInCart.push(product);
   }
 
-  getProductsCount(){
+  getProductsCount() {
     return this.productsInCart.length;
   }
 
-  getProductsSum(){
+  getProductsSum() {
     return this.productsInCart.map(p => p.price).reduce(function(sum, val){
       return sum + val;
-    })
+    });
   }
 
-  getProductNames(){
+  getProductNames() {
     return this.productsInCart.map(p => p.name);
   }
 
-  removeByIndex(index: number){
+  removeByIndex(index: number) {
     this.productsInCart.splice(index, 1);
   }
 
-  clearAll(){
+  clearAll() {
     this.productsInCart = new Array<Product>();
   }
 
-  constructor() { 
+  constructor() {
     this.productsInCart = new Array<Product>();
   }
 

@@ -1,7 +1,7 @@
-import {Categories} from './categories'
-import {Ingridients} from './ingridients'
+import {Categories} from './categories';
+import {Ingridients} from './ingridients';
 
-export class Product{
+export class Product {
 
     constructor(
         public name: string,
@@ -9,5 +9,9 @@ export class Product{
         public price: number,
         public category: Categories,
         public isAvailable: boolean,
-        public ingridients: Array<Ingridients>){}
+        public ingridients: Array<Ingridients>,
+        public additionalInfo: string = ''
+    ) {
+        this.additionalInfo = additionalInfo || 'no additional info';
+    }
 }

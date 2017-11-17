@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {ProductService} from '../product/product.service'
-import {Product} from '../shared/product.model'
-import {ProductComponent} from '../product/product.component'
+import { ProductService } from '../shared/product.service';
+import { Product } from '../shared/product.model';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
-  selector: 'product-list',
+  selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })

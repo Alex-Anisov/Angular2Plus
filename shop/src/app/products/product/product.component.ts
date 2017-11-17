@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Product} from '../shared/product.model'
-import {CartService} from '../../cart/cart.service'
+import {Product} from '../shared/product.model';
+import { CartService } from '../../carts/shared/cart.service';
 
 @Component({
-  selector: 'product',
+  selector: 'app-product-component',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
@@ -12,12 +12,11 @@ export class ProductComponent implements OnInit {
 
   @Input() product: Product;
 
-  public addToCart(){
+   public addToCart() {
     this.cartService.addToCart(this.product);
   }
 
-  constructor(private cartService: CartService) { 
-  }
+constructor(private cartService: CartService) { }
 
   ngOnInit() {
   }
