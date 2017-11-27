@@ -1,14 +1,17 @@
-<div class="product">
-<div>{{product.name}}</div>
-<div>{{product.description}}</div>
-<div>{{product.price}}</div>
-<div>{{product.category}}</div>
-<div>
-  Ingidients:
-  <br>
-    <div *ngFor="let c of product.ingridients">
-    - {{c}}
-    </div>
-</div>
-<input type="button" (click)="addToCart()" value="Add to Cart"/>
+<div class="product" [ngClass]="{'not-in-stock': !isAvailableInStock(product)}">
+  <div>{{product.name}}</div>
+  <div>{{product.description}}</div>
+  <div>{{product.price}}</div>
+  <div>{{product.category}}</div>
+  <div>
+    Ingidients:
+    <br>
+      <div *ngFor="let c of product.ingridients">
+      - {{c}}
+      </div>
+  </div>
+  <div>
+    Available in stock <span [ngClass]="{'few-in-stock': inStockCount(product) <=3 }">{{inStockCount(product)}}</span>
+  </div>
+  <input type="button" (click)="addToCart()" value="Add to Cart" [disabled]="!isAvailableInStock(product)"/>
 </div>

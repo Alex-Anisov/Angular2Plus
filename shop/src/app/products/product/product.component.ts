@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Product} from '../shared/product.model';
 import { CartService } from '../../carts/shared/cart.service';
+import { ProductService } from '../shared/product.service';
 
 @Component({
   selector: 'app-product-component',
@@ -14,10 +15,19 @@ export class ProductComponent implements OnInit {
 
    public addToCart() {
     this.cartService.addToCart(this.product);
+    this.productService.removeProductFromStock(this.product);
   }
 
-constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private productService: ProductService) { }
 
   ngOnInit() {
+  }
+
+  public inStockCount(product: Product): number {
+    return this.productService.productsInStock(product);
+  }
+
+  public isAvailableInStock(product: Product): boolean {
+    return this.productService.productsInStock(product) > 0;
   }
 }

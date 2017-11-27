@@ -1,5 +1,7 @@
 <div>
   <div>
-    {{product.name}}
+    {{CartItem.product.name}}, Count: {{CartItem.count}}
   </div>
+  <input value="-" (click)="removeItem(CartItem.product)" type="button">
+  <input value="+" (click)="addItem(CartItem.product)" [disabled]="availableInStock(CartItem.product) == 0" type="button">
 </div>

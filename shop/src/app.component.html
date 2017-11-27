@@ -3,6 +3,7 @@
         <app-product-list></app-product-list>
     </div>
     <div class="cart">
-        <app-cart-component></app-cart-component>
+        <app-cart-component #cart></app-cart-component>
     </div>
 </div>
+<input type="button" value="Reset App" (click)="resetAll()"/>

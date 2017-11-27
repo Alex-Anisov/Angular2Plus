@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {d}
 import { ProductModule } from '../products/product.module';
 
 import { CartComponent } from './cart/cart.component';

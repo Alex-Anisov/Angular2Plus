@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {Product} from '../../products/shared/product.model';
 import {CartService} from '../shared/cart.service';
 import { CartItemComponent } from '../cart-item/cart-item.component';
+import { ProductWithCount } from '../shared/product-with-count.model';
 
 @Component({
   selector: 'app-cart-component',
@@ -10,7 +11,7 @@ import { CartItemComponent } from '../cart-item/cart-item.component';
 })
 export class CartComponent implements OnInit {
 
-  public  getProducts(): Array<Product> {
+  public  getProducts(): Array<ProductWithCount> {
     return this.cartService.getProductsInCart();
   }
 

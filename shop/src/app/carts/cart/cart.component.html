@@ -4,7 +4,7 @@
 <div *ngIf="getProductsCount() > 0">
     <h3>You have {{getProductsCount()}} Product(s) in your cart:</h3>
     <div *ngFor="let p of getProducts()">
-        <app-cart-item [product]="p"></app-cart-item>
+        <app-cart-item [CartItem]="p"></app-cart-item>
         <!-- <input type="button" value="Remove" (click)="removeFromCart(i)"/> -->
     </div>
     <hr/>
