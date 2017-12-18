@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {d}
-import { ProductModule } from '../products/product.module';
+import { ProductModule } from '../products/products.module';
 
-import { CartComponent } from './cart/cart.component';
-import { CartItemComponent } from './cart-item/cart-item.component';
+import { CartComponent, CartItemComponent } from '.';
 
-import { CartService } from './shared/cart.service';
+import { CartService } from '../../services/';
 
 
 @NgModule({

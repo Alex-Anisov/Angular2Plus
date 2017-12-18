@@ -1,3 +1,4 @@
+Exact Product page
 <div class="product" [ngClass]="{'not-in-stock': !isAvailableInStock(product)}">
   <div>{{product.name}}</div>
   <div>{{product.description}}</div>
@@ -11,7 +12,7 @@
       </div>
   </div>
   <div>
-    Available in stock <span [ngClass]="{'few-in-stock': inStockCount(product) <=3 }">{{inStockCount(product)}}</span>
+    Available in stock <span [ngClass]="{'few-in-stock': inStockCount <=3 }">{{inStockCount}}</span>
   </div>
-  <input type="button" (click)="addToCart()" value="Add to Cart" [disabled]="!isAvailableInStock(product)"/>
+  <input type="button" (click)="addToCart()" value="Add to Cart" [disabled]="inStockCount > 0"/>
 </div>

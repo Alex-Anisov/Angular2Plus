@@ -1,4 +1,4 @@
-import {Product} from '../../products/shared/product.model';
+import {Product} from '.';
 
 export class ProductWithCount {
     public readonly product: Product;

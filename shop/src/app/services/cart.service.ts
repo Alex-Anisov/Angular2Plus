@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../../products/shared/product.model';
-import {ProductWithCount} from '../shared/product-with-count.model';
-import { ProductService } from '../../products/shared/product.service';
+import { Product, ProductWithCount } from '../models';
+import {} from '../shared/product-with-count.model';
+import { ProductService } from './product.service';
 
 @Injectable()
 export class CartService {

@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {Product} from '../../products/shared/product.model';
-import {CartService} from '../shared/cart.service';
-import { CartItemComponent } from '../cart-item/cart-item.component';
-import { ProductWithCount } from '../shared/product-with-count.model';
+import {Product, ProductWithCount} from '../../models';
+import {CartService} from '../../services';
+import { CartItemComponent } from './cart-item/cart-item.component';
 
 @Component({
   selector: 'app-cart-component',

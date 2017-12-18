@@ -4,6 +4,7 @@ import {Ingridients} from './ingridients';
 export class Product {
 
     constructor(
+        public Id: number,
         public name: string,
         public description: string,
         public price: number,

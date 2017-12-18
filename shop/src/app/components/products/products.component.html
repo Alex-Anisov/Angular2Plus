@@ -1,0 +1,36 @@
+<div class="panel panel-default" *ngFor="let product of products">
+  <div class="panel-heading">
+      {{product.name}}
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6"><span class="label label-default col-md-2">Description</span>
+        {{product.description}}
+       </div>
+       <div class="col-md-6">
+          <span class="label label-default col-md-3">Product Category</span>
+          {{product.category}}
+       </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <span class="label label-primary col-md-2">Price</span>
+            {{product.price}}
+          </div>
+          <div class="col-md-6">
+            <span class="label label-default col-md-2">
+                Ingidients:
+            </span>
+            <br>
+            <div *ngFor="let c of product.ingridients">
+            - {{c}}
+            </div>
+          </div>
+    </div>
+    </div>           
+      <div>          
+      </div>
+  <div class="panel-footer">
+      <input type="button" (click)="viewDetails(product.Id)" value="View Product" class="btn btn-primary"/>
+  </div>
+</div>

@@ -1,7 +1,9 @@
 import { Component, ElementRef } from '@angular/core';
-import {ProductListComponent} from './app/products/product-list/product-list.component';
-import { CartComponent } from './app/carts/cart/cart.component';
+import {ProductsComponent} from './components/products';
+import { CartComponent } from './components/cart/cart.component';
 import { ViewChild } from '@angular/core';
+
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',

@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductWithCount } from '../shared/product-with-count.model';
-import { Product } from '../../products/shared/product.model';
-import { CartService } from '../shared/cart.service';
-import { ProductService } from '../../products/shared/product.service';
+import { Product, ProductWithCount } from '../../../models';
+import { ProductService, CartService } from '../../../services';
 import { HostListener, HostBinding } from '@angular/core';
 
 @Component({
